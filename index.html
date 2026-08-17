@@ -112,7 +112,7 @@ function key(n){return "bb-price-v4-"+n}
 function priceFor(p){return localStorage.getItem(key(p.name)) || p.price}
 function render(){
  const nav=document.getElementById("nav"), menu=document.getElementById("menu");
- nav.innerHTML=`<a href="#menu-diario">🍽️ Menú diario</a>`+categories.map(c=>`<a href="#${slug(c)}">${categoryIcons[c]} ${c}</a>`).join("");
+ nav.innerHTML=`<a href="#almuerzo-popular">🥪 Almuerzo popular</a>`+categories.map(c=>`<a href="#${slug(c)}">${categoryIcons[c]} ${c}</a>`).join("");
  menu.innerHTML=categories.map(c=>{
    const arr=products.filter(p=>p.category===c);
    if(!arr.length)return "";
